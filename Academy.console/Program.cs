@@ -30,7 +30,9 @@ namespace Academy.console
             //TestUni_003();
             Test_tris();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         private static void TestUni_003()
         {
             //thereisaWinner = false;
