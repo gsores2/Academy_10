@@ -48,6 +48,8 @@
             this.txt_00.Size = new System.Drawing.Size(64, 64);
             this.txt_00.TabIndex = 0;
             this.txt_00.TextChanged += new System.EventHandler(this.txt_00_TextChanged);
+            this.txt_00.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_00_KeyDown);
+            this.txt_00.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_00_KeyPress);
             // 
             // txt_01
             // 
@@ -57,6 +59,8 @@
             this.txt_01.Size = new System.Drawing.Size(64, 64);
             this.txt_01.TabIndex = 1;
             this.txt_01.TextChanged += new System.EventHandler(this.txt_01_TextChanged);
+            this.txt_01.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_01_KeyDown);
+            this.txt_01.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_01_KeyPress);
             // 
             // txt_02
             // 
@@ -66,6 +70,8 @@
             this.txt_02.Size = new System.Drawing.Size(64, 64);
             this.txt_02.TabIndex = 2;
             this.txt_02.TextChanged += new System.EventHandler(this.txt_02_TextChanged);
+            this.txt_02.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_02_KeyDown);
+            this.txt_02.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_02_KeyPress);
             // 
             // txt_10
             // 
@@ -75,6 +81,8 @@
             this.txt_10.Size = new System.Drawing.Size(64, 64);
             this.txt_10.TabIndex = 3;
             this.txt_10.TextChanged += new System.EventHandler(this.txt_10_TextChanged);
+            this.txt_10.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_10_KeyDown);
+            this.txt_10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_10_KeyPress);
             // 
             // txt_11
             // 
@@ -84,6 +92,8 @@
             this.txt_11.Size = new System.Drawing.Size(64, 64);
             this.txt_11.TabIndex = 4;
             this.txt_11.TextChanged += new System.EventHandler(this.txt_11_TextChanged);
+            this.txt_11.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_11_KeyDown);
+            this.txt_11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_11_KeyPress);
             // 
             // txt_12
             // 
@@ -93,6 +103,8 @@
             this.txt_12.Size = new System.Drawing.Size(64, 64);
             this.txt_12.TabIndex = 5;
             this.txt_12.TextChanged += new System.EventHandler(this.txt_12_TextChanged);
+            this.txt_12.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_12_KeyDown);
+            this.txt_12.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_12_KeyPress);
             // 
             // txt_20
             // 
@@ -102,6 +114,8 @@
             this.txt_20.Size = new System.Drawing.Size(64, 64);
             this.txt_20.TabIndex = 6;
             this.txt_20.TextChanged += new System.EventHandler(this.txt_20_TextChanged);
+            this.txt_20.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_20_KeyDown);
+            this.txt_20.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_20_KeyPress);
             // 
             // txt_21
             // 
@@ -111,6 +125,8 @@
             this.txt_21.Size = new System.Drawing.Size(64, 64);
             this.txt_21.TabIndex = 7;
             this.txt_21.TextChanged += new System.EventHandler(this.txt_21_TextChanged);
+            this.txt_21.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_21_KeyDown);
+            this.txt_21.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_21_KeyPress);
             // 
             // txt_22
             // 
@@ -120,14 +136,17 @@
             this.txt_22.Size = new System.Drawing.Size(64, 64);
             this.txt_22.TabIndex = 8;
             this.txt_22.TextChanged += new System.EventHandler(this.txt_22_TextChanged);
+            this.txt_22.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_22_KeyDown);
+            this.txt_22.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_22_KeyPress);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(308, 268);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 20);
+            this.label1.Size = new System.Drawing.Size(0, 59);
             this.label1.TabIndex = 9;
             // 
             // Form1
