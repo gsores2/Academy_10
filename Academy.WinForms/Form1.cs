@@ -21,7 +21,7 @@ namespace Academy.WinForms
           
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) // ho un doppio click fatto quando ho creato itnerfaccia
         {
-
+            string citta = this.comboBox1.SelectedItem.ToString(); // predno quello che ho selezionato
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -11,7 +11,7 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
+        protected override void Dispose(bool disposing) 
         {
             if (disposing && (components != null))
             {
@@ -35,6 +35,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // checkBox1
@@ -59,7 +60,7 @@
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(344, 0);
+            this.dateTimePicker2.Location = new System.Drawing.Point(372, 26);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 26);
             this.dateTimePicker2.TabIndex = 3;
@@ -68,7 +69,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(517, 151);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(125, 49);
             this.button1.TabIndex = 4;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -87,7 +88,8 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(360, 245);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.panel1.Location = new System.Drawing.Point(474, 309);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 60);
             this.panel1.TabIndex = 6;
@@ -98,26 +100,38 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Milano",
             "Bologna "});
-            this.comboBox1.Location = new System.Drawing.Point(58, -3);
+            this.comboBox1.Location = new System.Drawing.Point(58, 24);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 28);
             this.comboBox1.TabIndex = 7;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged); // quando faccio doppio click crea metodo nel main 
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(58, 349);
+            this.label1.Location = new System.Drawing.Point(83, 349);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 20);
             this.label1.TabIndex = 8;
             this.label1.Text = "label1";
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(58, 280);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(126, 24);
+            this.radioButton2.TabIndex = 9;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "radioButton2";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel1);
@@ -134,7 +148,7 @@
         }
 
         #endregion
-
+        // lista di variabili di istanza
         private System.Windows.Forms.CheckBox checkBox1; // puntatore a vuoto
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
@@ -143,7 +157,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
-        
+        private System.Windows.Forms.RadioButton radioButton2;
     }
 }
 

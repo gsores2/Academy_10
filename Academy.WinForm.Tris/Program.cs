@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Academy.WinForms
+namespace Academy.WinForm.Tris
 {
     static class Program
     {
@@ -16,8 +16,7 @@ namespace Academy.WinForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1()); // costruttore Form1
-            // crea istanza di form1
+            Application.Run(new Form1());
         }
     }
 }
