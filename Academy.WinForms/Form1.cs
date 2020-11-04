@@ -12,9 +12,21 @@ namespace Academy.WinForms
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        public Form1() // chiama costruttore
         {
             InitializeComponent();
+
+
+        }
+          
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) // ho un doppio click fatto quando ho creato itnerfaccia
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.label1.Text = "Hello Form";
         }
     }
 }
