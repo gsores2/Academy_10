@@ -38,12 +38,13 @@
             this.txt_21 = new System.Windows.Forms.TextBox();
             this.txt_22 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txt_00
             // 
             this.txt_00.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_00.Location = new System.Drawing.Point(48, 27);
+            this.txt_00.Location = new System.Drawing.Point(79, 130);
             this.txt_00.Name = "txt_00";
             this.txt_00.Size = new System.Drawing.Size(64, 64);
             this.txt_00.TabIndex = 0;
@@ -54,7 +55,7 @@
             // txt_01
             // 
             this.txt_01.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_01.Location = new System.Drawing.Point(118, 27);
+            this.txt_01.Location = new System.Drawing.Point(149, 130);
             this.txt_01.Name = "txt_01";
             this.txt_01.Size = new System.Drawing.Size(64, 64);
             this.txt_01.TabIndex = 1;
@@ -65,7 +66,7 @@
             // txt_02
             // 
             this.txt_02.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_02.Location = new System.Drawing.Point(188, 27);
+            this.txt_02.Location = new System.Drawing.Point(219, 130);
             this.txt_02.Name = "txt_02";
             this.txt_02.Size = new System.Drawing.Size(64, 64);
             this.txt_02.TabIndex = 2;
@@ -76,7 +77,7 @@
             // txt_10
             // 
             this.txt_10.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_10.Location = new System.Drawing.Point(48, 97);
+            this.txt_10.Location = new System.Drawing.Point(79, 200);
             this.txt_10.Name = "txt_10";
             this.txt_10.Size = new System.Drawing.Size(64, 64);
             this.txt_10.TabIndex = 3;
@@ -87,7 +88,7 @@
             // txt_11
             // 
             this.txt_11.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_11.Location = new System.Drawing.Point(118, 97);
+            this.txt_11.Location = new System.Drawing.Point(149, 200);
             this.txt_11.Name = "txt_11";
             this.txt_11.Size = new System.Drawing.Size(64, 64);
             this.txt_11.TabIndex = 4;
@@ -98,7 +99,7 @@
             // txt_12
             // 
             this.txt_12.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_12.Location = new System.Drawing.Point(188, 97);
+            this.txt_12.Location = new System.Drawing.Point(219, 200);
             this.txt_12.Name = "txt_12";
             this.txt_12.Size = new System.Drawing.Size(64, 64);
             this.txt_12.TabIndex = 5;
@@ -109,7 +110,7 @@
             // txt_20
             // 
             this.txt_20.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_20.Location = new System.Drawing.Point(48, 167);
+            this.txt_20.Location = new System.Drawing.Point(79, 270);
             this.txt_20.Name = "txt_20";
             this.txt_20.Size = new System.Drawing.Size(64, 64);
             this.txt_20.TabIndex = 6;
@@ -120,7 +121,7 @@
             // txt_21
             // 
             this.txt_21.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_21.Location = new System.Drawing.Point(118, 167);
+            this.txt_21.Location = new System.Drawing.Point(149, 270);
             this.txt_21.Name = "txt_21";
             this.txt_21.Size = new System.Drawing.Size(64, 64);
             this.txt_21.TabIndex = 7;
@@ -131,7 +132,7 @@
             // txt_22
             // 
             this.txt_22.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_22.Location = new System.Drawing.Point(188, 167);
+            this.txt_22.Location = new System.Drawing.Point(219, 270);
             this.txt_22.Name = "txt_22";
             this.txt_22.Size = new System.Drawing.Size(64, 64);
             this.txt_22.TabIndex = 8;
@@ -144,16 +145,32 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(308, 268);
+            this.label1.Location = new System.Drawing.Point(364, 205);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 59);
             this.label1.TabIndex = 9;
             // 
+            // textBox1
+            // 
+            this.textBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.textBox1.BackColor = System.Drawing.SystemColors.Menu;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox1.Location = new System.Drawing.Point(29, 12);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(259, 46);
+            this.textBox1.TabIndex = 10;
+            this.textBox1.Text = "TIC TAC TOE";
+            // 
             // Form1
             // 
+            this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1098, 470);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_22);
             this.Controls.Add(this.txt_21);
@@ -183,6 +200,7 @@
         private System.Windows.Forms.TextBox txt_21;
         private System.Windows.Forms.TextBox txt_22;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
