@@ -12,6 +12,6 @@ namespace Academy.DataManager
         bool UserIsAnOwner(string username);
         DataOperationResult CreateNewCliente(Cliente newCliente);
         ContoCorrente GetContoCorrenteByUsername(string username);
-        bool AggiornaFileMovimenti(string user);
+        DataOperationResult AggiornaFileMovimenti(Movimento mov);
     }
 }

@@ -13,11 +13,14 @@ namespace Academy.Bank
 {
     public partial class ManageCCForm : Form
     {
+        private IDataManager datamanager1;
+        
         string start_form;
         string conto;
         ContoCorrente contocorrente;
         string beneficiario_bonifico;
-        private IDataManager datamanager;
+        DataOperationResult result_aggiornamento;
+       
         public  ManageCCForm(ContoCorrente cc, string numconto, double saldo, string sender)
         {
             InitializeComponent();
@@ -26,6 +29,7 @@ namespace Academy.Bank
             this.lbl_saldo.Text = saldo.ToString();
             start_form = sender;
             contocorrente = cc;
+            datamanager1 = new FileSystemDataManager();
             //this.txt_movimenti.Text = string.Join("\r\n", contocorrente.ShowMovimenti());
         }
 
@@ -58,7 +62,7 @@ namespace Academy.Bank
             //displayBox.AppendText(Environment.NewLine);
 
             this.txt_movimenti.Text += contocorrente.ShowMovimenti("prelievo") +"\r\n";
-            bool result_aggiornamento = datamanager.AggiornaFileMovimenti(contocorrente.GetOwner().Username); 
+            result_aggiornamento = datamanager1.AggiornaFileMovimenti(contocorrente.GetMovimento());
         }
 
         private  void btn_versa_Click(object sender, EventArgs e)
@@ -67,7 +71,7 @@ namespace Academy.Bank
             contocorrente.Deposita(Double.Parse(txt_importo.Text));
 
             this.txt_movimenti.Text += contocorrente.ShowMovimenti("deposito") + "\r\n";
-            bool result_aggiornamento = datamanager.AggiornaFileMovimenti(contocorrente.GetOwner().Username);
+            result_aggiornamento = datamanager1.AggiornaFileMovimenti(contocorrente.GetMovimento());
             //string line;
             //string saldo_corrente = "";
             //char[] chararray = new char[1]; // se scrivessi char[] ca starei dichiarando un puntatore vuoto
@@ -105,7 +109,7 @@ namespace Academy.Bank
             beneficiario_bonifico = this.txt_beneficiario.Text;
             contocorrente.Bonifico(Double.Parse(txt_importo_bonifico.Text), beneficiario_bonifico);
             this.txt_movimenti.Text += contocorrente.ShowMovimenti("bonifico") + "\r\n";
-            bool result_aggiornamento = datamanager.AggiornaFileMovimenti(contocorrente.GetOwner().Username);
+            result_aggiornamento = datamanager1.AggiornaFileMovimenti(contocorrente.GetMovimento());
         }
     }
 }

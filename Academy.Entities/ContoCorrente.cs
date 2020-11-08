@@ -13,7 +13,7 @@ namespace Academy.Entities
         string string_result = "";
         private string numeroConto;
         private double saldo;
-        
+        Movimento movimento_eseguito;
         Cliente owner; // serve perche conto corrente esiste solo se ho un cliente
         public List <Movimento> Movimenti= new List<Movimento>() ;
         //public List<Movimento> Movimenti{ get; } // cosi mi creo una lista con i movimenti
@@ -48,7 +48,7 @@ namespace Academy.Entities
         {
             this.numeroConto = numeroConto;
             this.saldo = saldo;
-           
+          
         }
         
         public OperationResult Deposita(double cifra)
@@ -56,12 +56,14 @@ namespace Academy.Entities
             saldo += cifra;
             Movimento deposito = new Movimento() // così inizializzo una classe in un modo diverso
             {
-                Owner = owner.Username,
+                //Owner = this.GetOwner().Username,
                 Tipo = TipoMovimento.Deposito,
                 Importo = cifra,
                 Data = DateTime.Now,// data di adesso
                 Beneficiario = ""
             };
+            deposito.NumConto = this.numeroConto;
+            movimento_eseguito = deposito;
             Movimenti.Add(deposito);
             string_result = "Deposito: " + deposito.Importo.ToString() + "  Data: " + deposito.Data.ToString("yyyy, MMMM dd");
             return OperationResult.Operazione_OK;
@@ -75,12 +77,14 @@ namespace Academy.Entities
                 result = OperationResult.Operazione_OK;
                 Movimento prelievo = new Movimento() // così inizializzo una classe in un modo diverso
                 {
-                    Owner = owner.Username,
+                    //Owner = this.GetOwner().Username,
                     Tipo = TipoMovimento.Prelievo,
                     Importo = cifra,
                     Data = DateTime.Now, // data di adesso
                     Beneficiario = ""
                 };
+                prelievo.NumConto = this.numeroConto;
+                movimento_eseguito = prelievo;
                 Movimenti.Add(prelievo);
                 string_result = "Prelievo: " + prelievo.Importo.ToString() + "  Data: " + prelievo.Data.ToString("yyyy, MMMM dd");
              
@@ -104,13 +108,16 @@ namespace Academy.Entities
                 result = OperationResult.Operazione_OK;
                 Movimento bonifico = new Movimento() // così inizializzo una classe in un modo diverso
                 {
-                    Owner = owner.Username,
+                    //Owner = this.GetOwner().Username,
                     Tipo = TipoMovimento.Bonifico,
                     Importo = cifra,
                     Data = DateTime.Now, // data di adesso
                     Beneficiario = beneficiario
                 };
+                bonifico.NumConto = this.numeroConto;
+                movimento_eseguito = bonifico;
                 Movimenti.Add(bonifico);
+
                 string_result = "Bonifico: " + bonifico.Importo.ToString() + "  Beneficiario: " + bonifico.Beneficiario + "  Data: " + bonifico.Data.ToString("yyyy, MMMM dd");
 
             }
@@ -124,7 +131,12 @@ namespace Academy.Entities
             return result;
 
         }
-        
+
+        public Movimento GetMovimento()
+        {
+            return movimento_eseguito;
+        }
+
         public string ShowMovimenti(string mov)
         {
             return string_result;

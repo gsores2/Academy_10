@@ -9,7 +9,7 @@ namespace Academy.Entities
 {
     public class Movimento
     {   
-        public string Owner { get; set; }
+        public string NumConto { get; set; }
         public TipoMovimento Tipo { get; set; }
         public double Importo { get; set; }
         public DateTime Data { get; set; }

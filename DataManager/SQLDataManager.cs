@@ -11,7 +11,7 @@ namespace Academy.DataManager
     public class SQLDataManager : IDataManager
 
     {
-        public bool AggiornaFileMovimenti(string user)
+         public DataOperationResult AggiornaFileMovimenti(Movimento mov)
         {
             throw new NotImplementedException();
         }
