@@ -78,6 +78,38 @@ namespace Academy.Helper
 
 
         }
+
+        public static double randomdouble(double a, double b)
+        {
+            /// metodo GIULIA 1 
+            // Thread.Sleep(100); //sta fermo 100 ms
+            //Random rand = new Random(DateTime.Now.Millisecond);
+            //if (a > b) // altrimenti sollevo un eccezione come sotTo
+            //{
+            //    return 0;
+            //}
+
+            //return rand.Next(a, b);
+
+
+
+            if (a > b)
+            {
+                throw new RandomArgumentsException(); //solleva eccezioen che ho scritto io
+            }
+            else
+            {
+                Guid newguid = Guid.NewGuid();
+                int hash = newguid.GetHashCode();
+                int seed = hash;
+                Random rnd = new Random(seed);
+                return rnd.NextDouble() *(b - a) + a;
+            }
+
+
+
+
+        }
         public static int GetSameInt(int sameint)
         {
             return sameint;

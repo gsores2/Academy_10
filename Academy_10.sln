@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Academy.MailSystem", "Acade
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Academy.MultiNotifier", "Academy.MultiNotifier\Academy.MultiNotifier.csproj", "{72BF3007-B857-46D5-B886-24D4D4F408A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Academy.Termometro", "Academy.Termometro\Academy.Termometro.csproj", "{F379CE8F-4F47-4893-A6DA-3EF7A493BBE9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{72BF3007-B857-46D5-B886-24D4D4F408A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72BF3007-B857-46D5-B886-24D4D4F408A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72BF3007-B857-46D5-B886-24D4D4F408A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F379CE8F-4F47-4893-A6DA-3EF7A493BBE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F379CE8F-4F47-4893-A6DA-3EF7A493BBE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F379CE8F-4F47-4893-A6DA-3EF7A493BBE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F379CE8F-4F47-4893-A6DA-3EF7A493BBE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
