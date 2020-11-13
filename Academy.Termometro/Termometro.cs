@@ -9,8 +9,7 @@ namespace Academy.Termometro
     public delegate void TemperatureEventHandler(Object sender, double temperature);
     public class Termometro
     { 
-      
-       
+     
         public event TemperatureEventHandler TemperatureTooHigh;
         public void SimulateTemp(double temp)
         {
@@ -22,6 +21,5 @@ namespace Academy.Termometro
               
         }
 
-        
     }
 }

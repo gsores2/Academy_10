@@ -81,15 +81,7 @@ namespace Academy.Helper
 
         public static double randomdouble(double a, double b)
         {
-            /// metodo GIULIA 1 
-            // Thread.Sleep(100); //sta fermo 100 ms
-            //Random rand = new Random(DateTime.Now.Millisecond);
-            //if (a > b) // altrimenti sollevo un eccezione come sotTo
-            //{
-            //    return 0;
-            //}
-
-            //return rand.Next(a, b);
+           
 
 
 
