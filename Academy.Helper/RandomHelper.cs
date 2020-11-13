@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Academy.Helper
 {
     public class RandomHelper
-    {  
+    { 
         public static int BinaryConversion(string binarystring)
         {
             
@@ -97,6 +97,18 @@ namespace Academy.Helper
                 Random rnd = new Random(seed);
                 return rnd.NextDouble() *(b - a) + a;
             }
+
+
+
+
+        }
+        public static string randomitem(List<String> lst_descrizione)
+        {
+
+                Random rnd = new Random();
+                 int r = rnd.Next(lst_descrizione.Count);
+                  return lst_descrizione[r];
+            
 
 
 
