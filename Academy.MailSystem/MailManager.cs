@@ -11,10 +11,10 @@ namespace Academy.MailSystem
     public class MailManager
     { // sto dichiarando l'evento
         public event MailManagerEventHandler MailArrived;
-        public void SimulateMailArrived(string from, string to, string subject, string body)
+        public void SimulateMailArrived(string from, string to, string subject, string body) // simulazione di sollevamento evento
         {
 
-            MailEventArgs args = new MailEventArgs()
+            MailEventArgs args = new MailEventArgs() // li ho creati nella classe delegatestuff per comodita
 
             {
                 Body = body,

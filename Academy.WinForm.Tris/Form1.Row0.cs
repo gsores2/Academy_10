@@ -34,6 +34,7 @@ namespace Academy.WinForm.Tris
                 e.Handled = true; // gestisce direttamente lui
             }
         }
+
         // key press gestisce il controllo del se è giusto quello che ho inserito rispetto a quello che volevo fare
         private void txt_00_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {

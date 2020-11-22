@@ -10,11 +10,11 @@ namespace HumanResources
 {
     public class Persona :IComparable //per avere compare to
     {
-        protected String Nome; //proprieta' prop tab tab le proprieta' sono tutte protette 
+        protected String Nome; //proprieta' prop tab tab le proprieta' sono tutte protette (ereditabili ma non modificabili dall'esterno)
         protected String Cognome;
         protected int Eta;
         public string Indirizzo { get; set; }
-        public Ruolo Inquadramento; // ho creato un ruolo .cs
+        public Ruolo Inquadramento; // ho creato un ruolo .cs che è un enum
 
         public Persona() //COSTRUTTORE BASE 
         {

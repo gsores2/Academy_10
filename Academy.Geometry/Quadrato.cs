@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Academy.Geometry
 {
-    public class Quadrato : IFiguraGeometrica
+    public class Quadrato : IFiguraGeometrica  // implementa interfaccia 
     {
         private double lato;
 

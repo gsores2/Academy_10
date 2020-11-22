@@ -22,7 +22,7 @@ namespace Academy.Helper
             {
                 if (binarystring[i] == '0' || binarystring[i] == '1') // posso indicizzare la stringa
                 {
-                    string bit_string = binarystring.Substring(i, 1); //substring
+                    string bit_string = binarystring.Substring(i, 1); //substring (il bit che sto considerando in quel momento)
 
                     binary_Array[i] = Int32.Parse(bit_string); // riempio il mio array di 1 e 0
                 }

@@ -8,7 +8,7 @@ namespace Academy.Geometry
 {
     public interface IFiguraGeometrica //LA CREO COME INTERFACCIA DIRETTAMENTE (ADD NEW ITEM, CODE, INTERFACE)
     {
-        double GetArea();
+        double GetArea(); // firma del metodo getarea (chi implementa quest'interfaccia dovrà avere il suo metodo get area)
         double GetPerimetro();
 
         // se volessi mettere diagonale poi in quadrato e cerchio mi darebbe errore IFiguraGemetrica quando la implemento

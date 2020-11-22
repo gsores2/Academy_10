@@ -17,21 +17,24 @@ namespace Academy.console
     {
         static void Main(string[] args) // vuole in input un array di stringhe che si chiama args
         {
-            // TestSplit();
-            //TestReadFile();
-            //TestHR();
-            //TestGeometry();
-            // TestGeometryAbstract();
-            // TestLoops();
-            //TestProblema();
-            //TestGeneric();
-            //TestUni_001();
-            ///TestUni_002();
-            //TestUni_003();
-            Test_tris();
+            //TestSplit();  //27/10
+            //TestReadFile();  //27/10
+            //TestHR(); //28/10
+            //TestGeometry(); //28/10
+            // TestGeometryAbstract();  //29/10
+            // TestLoops();  //29/10
+            //TestProblema();  //30/10
+            //TestGeneric();   //30/10
+            //TestUni_001(); //2/11
+            ///TestUni_002(); //2/11
+            //TestUni_003(); //3/11
+            Test_tris(); //3/11 risoluzione del testo in test uni 003
         }
+
+
+
         /// <summary>
-        /// 
+        /// 3/11 testo problema tris
         /// </summary>
         private static void TestUni_003()
         {
@@ -61,7 +64,6 @@ namespace Academy.console
                 //}
 
             }
-
         private static void Test_tris()
         {
             int[,] Tris = new int[3, 3]; // inizializzo la matrice
@@ -137,7 +139,6 @@ namespace Academy.console
 
             return result;
         }
-
         private static bool DiagonalControl(int v, int i, int j, int[,] matrix)
         {
             bool diagonal = false;
@@ -163,7 +164,6 @@ namespace Academy.console
 
             return (diagonal || antidiagonal); // ritorna vero se una delle due è vera
         }
-
         private static bool ColumnControl(int v, int j, int[,] matrix) // funziona come RowControl
         {
             bool isEqual = true;
@@ -174,7 +174,6 @@ namespace Academy.console
             }
             return isEqual;
         }
-
         private static bool RowControl(int v, int i, int[,] matrix)
         { //restituisce true se v è vincitore lungo la riga i
 
@@ -186,7 +185,6 @@ namespace Academy.console
             }
             return isEqual;
         }
-
         private static bool ThereAreMoves(int[,] matrix)
         {
             bool result = false;
@@ -204,7 +202,6 @@ namespace Academy.console
             }
             return result;
         }
-
         private static void Move(int v, int[,] matrix) // A Move devo passare il numero del giocatore che gioca e la matrice in cui gioca
         {
             int position = Academy.Helper.RandomHelper.randomNumber(0, 9); //mi ridà interi da 0 a 8 perchè esclude il secondo 
@@ -214,14 +211,12 @@ namespace Academy.console
             }
             matrix[position / 3, position % 3] = v; // ci metto 1 o 2 a seconda di chi sta giocando 
         }
-
         private static bool isAvailable(int position, int[,] matrix) // controlla se la posizione che ho appena generato è disponibile nella matrice su cui sto giocando
         {
             bool result = false;
             if (matrix[position / 3, position % 3] == 0) result = true; // se è zero è libera altrimenti no (ho fatto corrispondenza tra intero che va da 0 a 8 con la corrispondente 
             return result;                                              // posizione in matrice (la riga è il risultato della divisione per tre, la colonna il resto della divisione per 3)
         }
-
         private static void PrintTris(int[,] matrix)
         {
             char[,] temp = new char[matrix.GetLength(0), matrix.GetLength(1)]; // faccio caratteri 
@@ -239,7 +234,6 @@ namespace Academy.console
             System.Console.WriteLine("{0}\t{1}\t{2}", temp[2, 0], temp[2, 1], temp[2, 2]);
 
         }
-
         private static void initTris(int[,] matrix) // inizializza la matrice a tutti 0 
         {
             for (int i = 0; i < matrix.GetLength(0); i++)
@@ -254,15 +248,20 @@ namespace Academy.console
 
 
 
-
+        /// <summary>
+        /// TEST UNI 002 2/11
+        /// CONVERSIONE DA BINARIO A DECIMALE
+        /// </summary>
 
         private static void TestUni_002()
         {
             string b = "11011001";
-            int converted_binary = Academy.Helper.RandomHelper.BinaryConversion(b);
+            int converted_binary = Academy.Helper.RandomHelper.BinaryConversion(b); // Sta in random helper
             Console.WriteLine(converted_binary);
             Console.ReadLine();
         }
+
+
 
         /// <summary>
         /// TEST UNI 001 2/11
@@ -294,14 +293,13 @@ namespace Academy.console
             else System.Console.WriteLine("Non tutti diversi");
             System.Console.ReadLine();
         }
-
         private static bool printArrAllDifferent(int[] array)
         {
 
             int flag = 0;
             for (int i = 0; i < array.Length; i++)
             {
-                for (int j = i+1; j < array.Length; j++) // tanto li ho ontrollati prima
+                for (int j = i+1; j < array.Length; j++) // tanto li ho controllati prima
                 {
 
                     if (array[i] == array[j])
@@ -317,7 +315,6 @@ namespace Academy.console
             if (flag == 0) return true;
             else return false;
         }
-
         private static bool printArr(int[] array)
         {
             int flag = 0;
@@ -339,6 +336,8 @@ namespace Academy.console
 
             
         }
+
+
 
         /// <summary>
         /// TEST GENERIC:30/10 PER RISPIEGARE IL CONCETTO DI GENERICS
@@ -371,8 +370,11 @@ namespace Academy.console
             
         
         }
+
+
+
         /// <summary>
-        /// TEST PROBLEMA: ESERCIZIO 30/10
+        /// TEST PROBLEMA: ESERCIZIO 30/10 (aprire un file di testo in scrittura e scriverci cento interi casuali, poi leggerli e stamparli)
         /// </summary>
         private static void TestProblema()
         {
@@ -417,6 +419,9 @@ namespace Academy.console
             fileread.Close();
             System.Console.ReadLine();
         }
+
+
+
 
         /// <summary>
         /// TEST LOOPS: 29/10 per liste, CICLI FOR E FOR EACH
@@ -477,6 +482,8 @@ namespace Academy.console
             System.Console.ReadLine();
         }
 
+
+
         /// <summary>
         /// TEST GEOMETRY ABSTRACT E PRINT FIGURE ABSTRACT: 29/10 per classi astratte
         /// </summary>
@@ -490,7 +497,6 @@ namespace Academy.console
 
 
         }
-
         private static void PrintFiguraAbstract(GeometryAbstract.FiguraGeometrica f) 
         {
             string s = f.GetDescription(); //metodo non astratto della classe astratta FiguraGeometrica che viene ereditato da quadrato e cerchio
@@ -498,6 +504,9 @@ namespace Academy.console
             System.Console.ReadLine();
            
         }
+
+
+
         /// <summary>
         ///  TEST GEOMETRY, PRINT FIGURA, PRINT CERHIO E PRINT QUADRATO: 28/10 per interfacce
         /// </summary>
@@ -526,21 +535,21 @@ namespace Academy.console
             System.Console.WriteLine(" Area {0}, Perimetro {1}", f.GetArea(), f.GetPerimetro());
             // cosi posso dare qualsiasi figura in input 
         }
-
         private static void PrintCerchio(Cerchio c1)
         {
             System.Console.WriteLine("Cerchio: Area {0}, Perimetro {1}", c1.GetArea(), c1.GetPerimetro());
             //uso lo stesso comportamento che hanno sia il cerchio che il quadrato per cui posso ridurre a un metodo 
         }
-
         private static void PrintQuadrato(Quadrato q1)
         {
             System.Console.WriteLine("Quadrato: Area {0}, Perimetro {1}", q1.GetArea(), q1.GetPerimetro());
         }
 
+
+
         /// <summary>
         /// TEST PERSONA: 28/10
-        /// CREO PROGETTO HUMAN RESOURCES (ASSEMBLY) E CI AGGIUNGO LE CLASSI CHE MI SERVONO 
+        /// CREO PROGETTO HUMAN RESOURCES (ASSEMBLY) E CI AGGIUNGO LE CLASSI CHE MI SERVONO  (CONCETTI DI PRIVATE, PUBLIC ECC E DOWNCAST)
         /// </summary>
         private static void TestHR()
         {
@@ -554,11 +563,13 @@ namespace Academy.console
             System.Console.ReadLine();
 
         }
+
+
+
         /// <summary>
         /// TEST SPLIT: 27/10
-        /// testng how splitting a string in an array works 
+        /// testing how splitting a string in an array works (s.Split(chararray))
         /// </summary>
-        
         private static void TestSplit()
         {
             // using String[] Split(char[] separator, StringSplitOptions options);
@@ -574,6 +585,8 @@ namespace Academy.console
             System.Console.WriteLine("Temperatura {0}, Pressione {1}", temp_float, press_float); //vwtabtab
             System.Console.ReadLine();
         }
+
+
 
 
         /// <summary>
@@ -593,8 +606,7 @@ namespace Academy.console
             String out_press = "press.txt";
 
             System.IO.StreamWriter tempoutputfile = new System.IO.StreamWriter(System.IO.Path.Combine(dir, out_temp));
-            System.IO.StreamWriter pressoutputfile = new System.IO.StreamWriter(System.IO.Path.Combine(
-               dir, out_press));
+            System.IO.StreamWriter pressoutputfile = new System.IO.StreamWriter(System.IO.Path.Combine( dir, out_press));
 
             // Path.combine costruisce lui il path
             int counter = 0;
@@ -629,7 +641,7 @@ namespace Academy.console
                     String[] resultArray = line.Split(chararray);
                     float temp_float =float.Parse(resultArray[0], CultureInfo.InvariantCulture);
                     float press_float = float.Parse(resultArray[1], CultureInfo.InvariantCulture);
-                    tempoutputfile.WriteLine(temp_float);
+                    tempoutputfile.WriteLine(temp_float); // scrivo su due file diversi 
                     pressoutputfile.WriteLine(press_float);
 
                     sum_press = sum_press + press_float;

@@ -8,7 +8,7 @@ namespace Academy.MailSystem
 {
    public class Fax
     {
-        private MailManager _mm; // dichiaro istanza di mail manager che qui è puntatore vuoto
+        private MailManager _mm; // dichiaro istanza di mail manager che qui è puntatore vuoto (istanza nulla del notifier)
         public Fax(MailManager mm) // qui poi mm è un puntatore a un'istanza vera
         {
             this._mm = mm;

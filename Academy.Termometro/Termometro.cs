@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Academy.Termometro
 {
-    public delegate void TemperatureEventHandler(Object sender, double temperature);
+    public delegate void TemperatureEventHandler(Object sender, double temperature); //dichiarazione delegate
     public class Termometro
     { 
      
-        public event TemperatureEventHandler TemperatureTooHigh;
+        public event TemperatureEventHandler TemperatureTooHigh; // dichiarazione evento 
         public void SimulateTemp(double temp)
         {
-            if (temp >25 && TemperatureTooHigh!=null)
+            if (temp >25 && TemperatureTooHigh!=null) 
             {
-                TemperatureTooHigh?.Invoke(this, temp);
+                TemperatureTooHigh?.Invoke(this, temp); //sollevazione evento 
             }
 
               

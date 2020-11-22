@@ -22,7 +22,7 @@ namespace Academy.Bank
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) //bottone login
         {
             // se credenziali corrette vado all'altra form, altrimenti errore
             string username = this.textBox1.Text;
