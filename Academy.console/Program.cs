@@ -67,7 +67,7 @@ namespace Academy.console
         private static void Test_tris()
         {
             int[,] Tris = new int[3, 3]; // inizializzo la matrice
-            initTris(Tris); // chiamo initTris
+            initTris(Tris); // chiamo initTris per inizializzare la matrice (lo potevo fare anche qui)
 
             bool ThereIsaWinner = false;
             bool NoMoreMoves = false;
@@ -117,7 +117,7 @@ namespace Academy.console
             System.Console.WriteLine("'A is Winner' is {0}; 'B is Winner' is {1}", A_isWinner.ToString(), B_isWinner.ToString());
 
         }
-        private static bool IsWinner(int v, int[,] matrix)
+        private static bool IsWinner(int v, int[,] matrix) // v mi dice chi sta giocando
         {
             bool result = false; 
             for (int i = 0; i < matrix.GetLength(0); i++)
@@ -265,7 +265,7 @@ namespace Academy.console
 
         /// <summary>
         /// TEST UNI 001 2/11
-        /// Scrivere un programma "Tutti uguali" che prevede un array di 10 numeri interi contenente valori a piacere (senza bisogno di chiederli all’utente) e stampa "tutti uguali" se i valori
+        /// Scrivere un programma "Tutti uguali" che prende un array di 10 numeri interi contenente valori a piacere (senza bisogno di chiederli all’utente) e stampa "tutti uguali" se i valori
         /// dell’array sono tutti uguali, oppure stampa "non tutti uguali" altrimenti. (Il programma deve essere
         /// scritto facendo finta di non sapere quali siano i valori inseriti nell’array). Per riempire l'array utilizzare la classe 
         /// RandomHelper in 2 casi: 1. restituisce valori casuali, 2. restituisce valori uguali
@@ -281,7 +281,7 @@ namespace Academy.console
             {
                 //int_Arr_rand[i] = Academy.Helper.RandomHelper.randomNumber(min, max);
                 
-                int_Arr_equals[i] = Academy.Helper.RandomHelper.GetSameInt(max);
+                int_Arr_equals[i] = Academy.Helper.RandomHelper.GetSameInt(max); // mi ridà sempre lo stesso numero casuale
 
             }
             //printArr(int_Arr_equals);
@@ -378,7 +378,7 @@ namespace Academy.console
         /// </summary>
         private static void TestProblema()
         {
-            String dir = @"C:\Users\Giulia\Desktop";
+            String dir = @"C:\Users\giulia.soresini\Desktop\Microsoft Academy for Girls\WEEK 1-3";
             String name_file = "randomfile.txt";
             string line;
             String path = dir + @"\" + name_file; // creo il percorso del file concatenando stringhe
@@ -392,7 +392,7 @@ namespace Academy.console
                     int n = Academy.Helper.RandomHelper.randomNumber(c1, c2);
                     filerand.WriteLine(n);
                 }
-                catch (Academy.Helper.RandomArgumentsException excp) //mi sono scritta io l'eccezione
+                catch (Academy.Helper.RandomArgumentsException excp) //mi sono scritta io l'eccezione per gestire ordine errato dei parametri
                 {
                     System.Console.WriteLine(excp.Message); //ho riscritto la proprieta' message dell'eccezione
                     break;
@@ -486,6 +486,7 @@ namespace Academy.console
 
         /// <summary>
         /// TEST GEOMETRY ABSTRACT E PRINT FIGURE ABSTRACT: 29/10 per classi astratte
+        /// uso Academy.GeometryAbstract
         /// </summary>
         private static void TestGeometryAbstract()
         {
@@ -509,6 +510,7 @@ namespace Academy.console
 
         /// <summary>
         ///  TEST GEOMETRY, PRINT FIGURA, PRINT CERHIO E PRINT QUADRATO: 28/10 per interfacce
+        ///  uso Academy.Geometry
         /// </summary>
         private static void TestGeometry()
         {
@@ -549,7 +551,8 @@ namespace Academy.console
 
         /// <summary>
         /// TEST PERSONA: 28/10
-        /// CREO PROGETTO HUMAN RESOURCES (ASSEMBLY) E CI AGGIUNGO LE CLASSI CHE MI SERVONO  (CONCETTI DI PRIVATE, PUBLIC ECC E DOWNCAST)
+        /// CREO PROGETTO HUMAN RESOURCES (ASSEMBLY) E CI AGGIUNGO LE CLASSI CHE MI SERVONO (CONCETTI DI PRIVATE, PUBLIC ECC E DOWNCAST)
+        /// USO HUMAN RESOURCES
         /// </summary>
         private static void TestHR()
         {
@@ -596,7 +599,7 @@ namespace Academy.console
         private static void TestReadFile()
         {
             // lettura file di testo (dati) 
-            String dir = @"C:\Users\Giulia\Desktop";
+            String dir = @"C:\Users\giulia.soresini\Desktop\Microsoft Academy for Girls\WEEK 1-3";
             // per stampare su due righe \r\n quindi ora sta interpretando come caratteri di escape
             // quindi o metto doppio backslash oppure metto chiocciola davanti ai doppi apici
             String filename = "pressione.txt";

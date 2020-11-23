@@ -9,7 +9,8 @@ namespace Academy.WinForm.Tris
    partial class Form1
     {
      #region "txt_00
-        private void txt_00_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        private void txt_00_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e) 
+            // non controlla il cambio nella casella di teso, perchè cosi facendo non potrei cancellare
         {
             txt_00_IsCorrect = false;
             if(Control.IsKeyLocked(Keys.CapsLock)) // ho premuto caps lock
@@ -43,7 +44,7 @@ namespace Academy.WinForm.Tris
                 switch (lastMove)
                 {
                     case Moves.X: // X è B che ha appena mosso
-                        if (e.KeyChar == 88)
+                        if (e.KeyChar == 88) // se provo a reinserire una Xx
                         {
 
                             this.label1.Text = "E' il turno di A"; // se ho già messo X
@@ -53,7 +54,7 @@ namespace Academy.WinForm.Tris
                         {
                             this.label1.Text = "";
                            
-                            lastMove = Moves.O;
+                            lastMove = Moves.O; // se giusto muove A
                             Tris[0, 0] = "O";
                             this.txt_00.Text = "O";
                             this.txt_00.Enabled = false;

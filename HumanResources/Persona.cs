@@ -46,6 +46,7 @@ namespace HumanResources
 
             return s; //base.tostring invoca il metodo cosi com'e' 
         }
+
         // QUESTO FATTO IL 30/10
         public override bool Equals(object obj) //ereditato da object, ne faccio override per fare in modo che mi dica che sono guuali due persone con stesso noem e cognome anche con diverso indirizzo
         {

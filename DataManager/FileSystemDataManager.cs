@@ -10,7 +10,7 @@ namespace Academy.DataManager
 {
     public class FileSystemDataManager : IDataManager
     { 
-        private string bankDir= @"C:\Users\giulia.soresini\Desktop";
+        private string bankDir= @"C:\Users\giulia.soresini\Desktop\Microsoft Academy for Girls\WEEK 1-3";
         private string usersFileName;
         private string clientiFileName;
         private string CCFileName;

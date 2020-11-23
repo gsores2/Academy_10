@@ -26,7 +26,7 @@ namespace Academy.Helper
 
                     binary_Array[i] = Int32.Parse(bit_string); // riempio il mio array di 1 e 0
                 }
-                else error = true;
+                else error = true; // controllo di aver inserito solo 0 e 1
 
               }
             // trasfromo l'array di char in array di int (non mi serve se uso substring )

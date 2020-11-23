@@ -12,10 +12,10 @@ namespace Academy.WinForm.Tris
 {   // mi serve un enum fuori che dichiaro come classe
     public partial class Form1 : Form
     {
-        private Moves lastMove;
+        private Moves lastMove; // enum che contiene le possibili mosse
         public Form1()
         {
-            lastMove = Moves.NoMoveYet; // nel costruttore ancora non ho dfatto mosse 
+            lastMove = Moves.NoMoveYet; // nel costruttore ancora non ho dfatto mosse (NoMoveYet)
             InitializeComponent();
            
         }
@@ -34,7 +34,7 @@ namespace Academy.WinForm.Tris
        
         #endregion
         // key down sollevato appena inserisco qualcosa in textbox, qui mi accorgo se i dati sono corretti
-
+        // E' UNA CLASSE PARZIALE, GESTISCO in FORM1.ROWi
         private bool IsWinner(string[,] matrix, string v)
         {
               bool result = false; 
